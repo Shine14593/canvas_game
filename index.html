@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brick Breaker Game</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #myCanvas {
+        border: 1px solid black;
+      }
+      #buttonContainer, #buttonSetting {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="background-music" loop>
+        <source src="escape-the-grid-161354.mp3" type="audio/mpeg">
+    </audio>
+    <canvas id="myCanvas" width="650" height="600"></canvas>
+    <div id="buttonContainer">
+      <button id="startButton">Start</button>
+      <button id="instructionsButton">Instructions</button>
+      <button id="settingsButton">Settings</button>
+    </div>
+    <div id="buttonSetting" style="display: none">
+        <button id="lowSetting">Dễ</button>
+        <button id="mediumSetting">vừa</button>
+        <button id="hardSetting">Khó</button>
+      </div>
+    <script src="js/Ball.js"></script>
+    <script src="js/Brick.js"></script>
+    <script src="js/Paddle.js"></script>
+    <script src="js/Main.js"></script>
+  </body>
+</html>
